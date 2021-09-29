@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>201819810</title>
+    </head>
+    <body>
+        <form>
+            <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+            <input type="checkbox" name="vehicle" value="Car">I have a car<br>
+            <input type="button" id="show" value="选了几个" onclick=count()>
+        </form>
+        <script type="text/javascript">
+            function count(){
+                var cnt = 0;
+                var input_arr = document.getElementsByTagName("input");
+                for(var i=0; i<input_arr.length; ++i){
+                    if(input_arr[i].type == "checkbox" && input_arr[i].checked)
+                    cnt++;
+                }
+                window.alert("选择了"+cnt+"个");
+            }            
+        </script>
+    </body>
+</html>

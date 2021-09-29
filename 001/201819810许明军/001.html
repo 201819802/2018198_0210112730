@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>201819810</title>
+    </head>
+    <body>
+        <p>test001</p>
+        <p>test002</p>
+        <p>test005</p>
+        <script type="text/javascript">
+            var p_arr = document.getElementsByTagName("p");
+            console.log(p_arr.length);
+            for(var i=0; i<p_arr.length; ++i){
+                p_arr[i].onclick = function(){
+                    window.alert(this.innerText);
+                }
+            }
+        </script>
+    </body>
+</html>
