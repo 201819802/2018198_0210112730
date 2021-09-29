@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>201819826</title>
+    </head>
+    <body>
+        <p>第一个p标签</p>
+        <p>第二个p标签</p>
+        <p>第三个p标签</p>
+		
+		<table border="1">
+		    <tr>
+		        <td>一行一列</td>
+		        <td>一行二列</td>
+		    </tr>
+		    <tr>
+		        <td>二行一列</td>
+		        <td>二行二列</td>
+		    </tr>
+		    <tr>
+		       <td>三行一列</td>
+		       <td>三行二列</td>
+		    </tr>
+		    <tr>
+		        <td>四行一列</td>
+		        <td>四行二列</td>
+		    </tr>
+		    <tr>
+		        <td>五行一列</td>
+		        <td>五行二列</td>
+		    </tr>
+		</table>
+		
+		<form>
+		    <input type="checkbox" name="vehicle" value="Bike">1<br>
+		    <input type="checkbox" name="vehicle" value="Car">2<br>
+			<input type="checkbox" name="vehicle" value="Car">3<br>
+			<input type="checkbox" name="vehicle" value="Car">4<br>
+		    <input type="button" id="show" value="选了几个" onclick=count()>
+		</form>
+		<script type="text/javascript">
+			//one
+			var p_arr = document.getElementsByTagName("p");
+			console.log(p_arr.length);
+			for(var i=0; i<p_arr.length; ++i){
+			    p_arr[i].onclick = function(){
+			        window.alert(this.innerText+"被点击");
+			    }
+			}
+			//two
+			var tb_arr = document.getElementsByTagName("table");
+			for(var i=0; i<tb_arr.length; ++i){
+			    console.log(i);
+			    for(var j=0; j<tb_arr[i].rows.length; ++j){
+			        console.log(j);
+			        if(j&1)
+			        tb_arr[i].rows[j].bgColor = "red";
+			        else 
+			        tb_arr[i].rows[j].bgColor = "white";
+			    }
+			}
+			//three
+		    function count(){
+		        var cnt = 0;
+		        var input_arr = document.getElementsByTagName("input");
+		        for(var i=0; i<input_arr.length; ++i){
+		            if(input_arr[i].type == "checkbox" && input_arr[i].checked)
+		            cnt++;
+		        }
+		        window.alert("选了"+cnt+"个");
+		    }            
+		</script>
+    </body>
+</html>
