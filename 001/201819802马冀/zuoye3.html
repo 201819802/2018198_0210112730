@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>201819802maji</title>
+    </head>
+    <body>
+        <form>
+            <input type="checkbox" name="vehicle" value="Bike">one<br>
+            <input type="checkbox" name="vehicle" value="Car">two<br>
+			<input type="checkbox" name="vehicle" value="Car">three<br>
+			<input type="checkbox" name="vehicle" value="Car">four<br>
+            <input type="button" id="show" value="选了几个" onclick=count()>
+        </form>
+        <script type="text/javascript">
+            function count(){
+                var cnt = 0;
+                var input_arr = document.getElementsByTagName("input");
+                for(var i=0; i<input_arr.length; ++i){
+                    if(input_arr[i].type == "checkbox" && input_arr[i].checked)
+                    cnt++;
+                }
+                window.alert("选了"+cnt+"个");
+            }            
+        </script>
+    </body>
+</html>

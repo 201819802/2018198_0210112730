@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>201819802maji</title>
+    </head>
+    <body>
+        <p>第一个p标签(点击)</p>
+        <p>第二个p标签(点击)</p>
+        <p>第三个p标签(点击)</p>
+        <script type="text/javascript">
+            var p_arr = document.getElementsByTagName("p");
+            console.log(p_arr.length);
+            for(var i=0; i<p_arr.length; ++i){
+                p_arr[i].onclick = function(){
+                    window.alert(this.innerText+"被点击");
+                }
+            }
+        </script>
+    </body>
+</html>

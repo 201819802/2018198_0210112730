@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>201819802maji</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td>一行一列</td>
+                <td>一行二列</td>
+            </tr>
+            <tr>
+                <td>二行一列</td>
+                <td>二行二列</td>
+            </tr>
+            <tr>
+               <td>三行一列</td>
+               <td>三行二列</td>
+            </tr>
+            <tr>
+                <td>四行一列</td>
+                <td>四行二列</td>
+            </tr>
+            <tr>
+                <td>五行一列</td>
+                <td>五行二列</td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            var tb_arr = document.getElementsByTagName("table");
+            for(var i=0; i<tb_arr.length; ++i){
+                console.log(i);
+                for(var j=0; j<tb_arr[i].rows.length; ++j){
+                    console.log(j);
+                    if(j&1)
+                    tb_arr[i].rows[j].bgColor = "red";
+                    else 
+                    tb_arr[i].rows[j].bgColor = "white";
+                }
+            }
+        </script>
+    </body>
+</html>
